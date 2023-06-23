@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Response Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Response Page</h1>
+<h2>Location: {{ location }}</h2>
+    
+     <h2>Weather Information</h2>
+    <p>Temperature: {{ temperature }}</p>
+    <p>Description: {{ description }}</p>
+  
+    <p>Local Time: {{ local_time }}</p>
+
+    <h2>Here are your suggestions:</h2>
+
+    <p>Capuccino</p>
+    <p>Stay at home</p>
+    <p>watch RRR</p>
+
+
+</body>
+</html>

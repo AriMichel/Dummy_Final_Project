@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Drink Buddy welcomes you</h1>
+    <h2>Let me suggest a drink for you</h2>
+    <h2>Let's start by knowing where are you located, that will allow me to know what time is it and the weather on your side</h2>
+    <form method="post" action="{% url 'landing_page' %}">
+        {% csrf_token %}
+        <label for="location">Enter your location:</label>
+        <input type="text" name="location" id="location" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
